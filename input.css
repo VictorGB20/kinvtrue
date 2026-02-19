@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  /* Modern Enterprise Palette (Option 2) */
+  --brand-primary: #0f172a;   /* Slate 900 (Fuerte/Corporativo) */
+  --brand-action: #6366f1;    /* Indigo 500 (Acción/Botones) */
+  --brand-bg: #f8fafc;        /* Slate 50 (Fondo Limpio) */
+  --brand-accent: #10b981;    /* Esmeralda (Éxito/Stock) */
+  --brand-white: #ffffff;     /* Blanco Puro */
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 shadow-md active:scale-95 flex items-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white border border-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-50 transition-all duration-200 shadow-sm active:scale-95;
+  }
+
+  .card-white {
+    @apply bg-white border border-gray-100 rounded-xl shadow-sm p-6;
+  }
+
+  .input-field {
+    @apply mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500;
+  }
+
+  /* Utilidad para iconos sprite */
+  .icon {
+    @apply w-5 h-5 fill-none stroke-current;
+  }
+}
