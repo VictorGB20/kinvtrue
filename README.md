@@ -104,7 +104,7 @@ El diseño se inspira en dashboards modernos de SaaS (Software as a Service) com
 
 ### GitHub Pages
 
-La aplicación está publicada en GitHub Pages: https://victorgb20.github.io/ProyectoFinalDisenno/
+La aplicación está publicada en GitHub Pages: https://victorgb20.github.io/kinvtrue/
 
 ### Capturas del Sitio
 
