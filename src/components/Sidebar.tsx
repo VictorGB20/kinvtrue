@@ -23,14 +23,7 @@ export const Sidebar = () => {
                     onClick={() => setIsOpen(!isOpen)}
                     className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
                 >
-                    <svg
-                        className={`w-6 h-6 transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
+                    <svg className={`w-6 h-6 transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-chevron-up`} /></svg>
                 </button>
             </div>
 
@@ -50,9 +43,7 @@ export const Sidebar = () => {
                     className={({ isActive }) => `w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${isActive ? 'bg-blue-600 text-white' : 'text-slate-400 hover:bg-slate-800 hover:text-white'
                         }`}
                 >
-                    <svg className="w-6 h-6 stroke-current fill-none">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
+                    <svg className="w-6 h-6 stroke-current fill-none"><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-profile-2`} /></svg>
                     <span className="font-medium">Profile</span>
                 </NavLink>
                 <NavLink
@@ -60,9 +51,7 @@ export const Sidebar = () => {
                     className={({ isActive }) => `w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${isActive ? 'bg-blue-600 text-white' : 'text-slate-400 hover:bg-slate-800 hover:text-white'
                         }`}
                 >
-                    <svg className="w-6 h-6 stroke-current fill-none">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    <svg className="w-6 h-6 stroke-current fill-none"><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-info-circle`} /></svg>
                     <span className="font-medium">About</span>
                 </NavLink>
 
