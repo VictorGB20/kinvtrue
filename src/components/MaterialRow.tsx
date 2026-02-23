@@ -17,7 +17,7 @@ export const MaterialRow = ({ material, onDelete, onEdit }: MaterialRowProps) =>
                 <span className={`font-bold flex items-center justify-center gap-1 ${totalStock < 3 ? 'text-red-500' : ''}`}>
                     {totalStock}
                     {totalStock < 3 && (
-                        <svg className="w-4 h-4 text-red-500 fill-current"><use href="/sprites.svg#icon-alert" /></svg>
+                        <svg className="w-4 h-4 text-red-500 fill-current"><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-alert`} /></svg>
                     )}
                 </span>
             </td>
@@ -51,13 +51,13 @@ export const MaterialRow = ({ material, onDelete, onEdit }: MaterialRowProps) =>
                     onClick={() => onEdit(material)}
                     className="text-blue-600 hover:text-blue-900"
                 >
-                    <svg className="w-5 h-5 stroke-current fill-none"><use href="/sprites.svg#icon-edit" /></svg>
+                    <svg className="w-5 h-5 stroke-current fill-none"><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-edit`} /></svg>
                 </button>
                 <button
                     onClick={() => onDelete(material.id)}
                     className="text-red-600 hover:text-red-900"
                 >
-                    <svg className="w-5 h-5 stroke-current fill-none"><use href="/sprites.svg#icon-trash" /></svg>
+                    <svg className="w-5 h-5 stroke-current fill-none"><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-trash`} /></svg>
                 </button>
             </td>
         </tr>

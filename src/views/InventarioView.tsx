@@ -66,7 +66,7 @@ export const Inventario = () => {
                     onClick={() => setIsModalOpen(true)}
                     className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-all shadow-sm"
                 >
-                    <svg className="w-5 h-5 stroke-current fill-none"><use href="/sprites.svg#icon-plus" /></svg>
+                    <svg className="w-5 h-5 stroke-current fill-none"><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-plus`} /></svg>
                     Añadir Material
                 </button>
             </div>

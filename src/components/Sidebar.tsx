@@ -14,7 +14,7 @@ export const Sidebar = () => {
             {/* Logo / Nombre de la Empresa */}
             <div className="p-6 border-b border-slate-800 flex items-center justify-between">
                 <h1 className="text-xl font-bold flex items-center gap-2">
-                    <div className="w-8 h-8 rounded flex items-center justify-center"><img src="/pinguizo.png" alt="" /></div>
+                    <div className="w-8 h-8 rounded flex items-center justify-center"><img src={`${import.meta.env.BASE_URL}pinguizo.png`} alt="" /></div>
                     <span>Kinv<span className="text-blue-500">True</span></span>
                 </h1>
 
@@ -42,7 +42,7 @@ export const Sidebar = () => {
                     className={({ isActive }) => `w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${isActive ? 'bg-blue-600 text-white hover:bg-blue-500' : 'text-slate-400 hover:bg-slate-800 hover:text-white'
                         }`}
                 >
-                    <svg className="w-6 h-6 stroke-current fill-none"><use href="/sprites.svg#icon-dashboard" /></svg>
+                    <svg className="w-6 h-6 stroke-current fill-none"><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-dashboard`} /></svg>
                     <span className="font-medium">Dashboard</span>
                 </NavLink>
                 <NavLink
@@ -85,7 +85,7 @@ export const Sidebar = () => {
                         onClick={logout}
                         className="w-16 flex items-center justify-center gap-2 p-2 text-sm text-red-400 hover:bg-slate-800 rounded transition-colors"
                     >
-                        <svg className="w-4 h-4 stroke-current fill-none"><use href="/sprites.svg#icon-logout" /></svg>
+                        <svg className="w-4 h-4 stroke-current fill-none"><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-logout`} /></svg>
                     </button>
                 </div>
             </div>
