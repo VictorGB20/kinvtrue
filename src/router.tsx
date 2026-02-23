@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import { Dashboard as DashboardView } from "./views/DashboardView";
 import { Profile as ProfileView } from "./views/ProfileView";
@@ -9,7 +9,7 @@ import { Register as RegisterView } from "./views/RegisterView";
 
 export default function AppRouter() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/login" element={<LoginView />} />
                 <Route path="/register" element={<RegisterView />} />
@@ -19,6 +19,6 @@ export default function AppRouter() {
                     <Route path="/about" element={<AboutView />} />
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
