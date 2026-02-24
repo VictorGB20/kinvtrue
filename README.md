@@ -1,115 +1,110 @@
-# KinvTrue - Gestión de Inventario Local
+# Portfolio - Proyecto Intermodular (DAW)
 
-![KinvTrue Logo](public/pinguizo.png)
-
-**KinvTrue** es una solución integral para la gestión de inventario y seguimiento de reparaciones, diseñada específicamente para optimizar el flujo de trabajo en talleres técnicos y almacenes. El proyecto se centra en la velocidad, la privacidad y la facilidad de uso mediante el almacenamiento local.
+Este repositorio contiene el **Proyecto Intermodular** de Desarrollo de Aplicaciones Web. El objetivo principal es el diseño, desarrollo y publicación de un portfolio profesional totalmente funcional, aplicando las mejores prácticas de UI/UX y tecnologías web modernas.
 
 ---
 
-## 1. Contexto (Briefing)
+## 📋 Índice
 
-### Información General
-
-KinvTrue nace de la necesidad de tener un control preciso del stock y estado de reparaciones de forma inmediata y sin dependencias externas de servidores complejos, utilizando el navegador como base de datos persistente.
-
-### Objetivos del Proyecto
-
-- Desarrollar una interfaz moderna y fluida para la gestión de materiales.
-- Implementar un sistema de filtrado dinámico para estados de reparación e inventario bajo.
-- Garantizar la independencia de datos entre usuarios mediante perfiles locales.
-
-### Descripción del Negocio
-
-El sistema permite a los técnicos registrar materiales, actualizar su estado (en reparación, disponible, etc.) y visualizar el estado global del taller desde un panel de control intuitivo.
-
-### Público Objetivo
-
-Técnicos de reparación, gestores de almacenes pequeños y entusiastas del DIY que necesiten organizar sus componentes.
-
-### Detalles Técnicos
-
-- **Arquitectura**: Single Page Application (SPA).
-- **Persistencia**: LocalStorage API.
-- **Frontend**: React + TypeScript.
-- **Estándares**: Diseño orientado a componentes y Atomic Design.
+1. [Contexto y Briefing](#1-contexto-y-briefing)
+2. [Análisis y Planificación de Estrategia](#2-análisis-y-planificación-de-estrategia)
+3. [Diseño Visual y Prototipado](#3-diseño-visual-y-prototipado)
+4. [Implementación Técnica (Desarrollo Web)](#4-implementación-técnica-desarrollo-web)
+5. [Publicación y Despliegue](#5-publicación-y-despliegue)
+6. [Recursos y Bibliografía](#6-recursos-y-bibliografía)
+7. [Manual de Uso](#7-manual-de-uso)
+8. [Evaluación y Rúbrica](#8-evaluación-y-rúbrica)
 
 ---
 
-## 2. Análisis y Planificación
+## 1. Contexto y Briefing
+La comunicación entre el cliente y la agencia es la base de un buen diseño. Este proyecto se fundamenta en un documento de bases que recoge:
+- **Información del Cliente:** Perfil profesional o corporativo.
+- **Objetivos:** Definición de metas claras para el sitio web.
+- **Descripción del Negocio:** Análisis del sector y propuesta de valor.
+- **Público Objetivo:** Definición del perfil de usuario (target).
+- **Requerimientos Específicos:** Funcionalidades clave solicitadas.
+- **Detalles Técnicos y Plazos:** Limitaciones tecnológicas y cronograma inicial.
 
-### Objetivos Principales
+## 2. Análisis y Planificación de Estrategia
+Fase dedicada a la optimización de la experiencia de usuario y la visibilidad en el mercado:
+- **Objetivos Principales:** Resultados SMART (específicos, medibles, alcanzables, relevantes y temporales).
+- **Desglose de Tareas:** Listado de acciones concretas con responsables y plazos.
+- **Diagrama de Gantt:** Visualización del cronograma del proyecto para la gestión del tiempo.
+- **Mapa del Sitio:** Diagrama visual de la arquitectura de la información y jerarquía de páginas.
 
-1. **Fase 1**: Diseño de la arquitectura de estados y rutas. (Finalizado)
-2. **Fase 2**: Implementación del core de gestión de materiales con Zustand. (Finalizado)
-3. **Fase 3**: Pulido de UI/UX con Tailwind 4 y animaciones. (Finalizado)
+## 3. Diseño Visual y Prototipado
+Generación de la identidad visual y estudio de la competencia:
+- **Estudio de Competidores:** Análisis de fortalezas y debilidades de referentes directos.
+- **Página de Referencias:** Recopilación de fuentes de inspiración, paletas y tipografías.
+- **Sistema de Diseño (Figma):**
+  - Paleta de colores (3 a 5 colores principales).
+  - Escala de espaciados y sistema de Grid.
+  - Tipografías y estilos de texto.
+  - Uso de **variables y design tokens** para una integración coherente.
+- **Prototipado:** Diseños de alta fidelidad para escritorio y móvil creados en páginas separadas de Figma.
+- **📂 Enlace al Prototipo en Figma:** [Haz clic aquí para ver el diseño](https://www.figma.com/proto/Ke9Z25Hg3EADcfHQALehpT/Untitled?node-id=0-1&t=S662r5xoc8agGYiu-1)
 
-### Desglose de Tareas
+## 4. Implementación Técnica (Desarrollo Web)
+Traducción del diseño a código funcional utilizando estándares modernos:
+- **Framework de Estilos:** [Tailwind CSS v4](https://tailwindcss.com/) en modo producción.
+- **Diseño Responsivo:** Implementación de breakpoints y layouts adaptables según la documentación oficial.
+- **Gestión de Assets:** Implementación de la biblioteca `sprites.svg` para optimizar la carga de iconos y logotipos SVG.
+- **Personalización y Reutilización:**
+  - Definición de variables propias en el tema de Tailwind.
+  - Uso intensivo de la directiva `@apply` para mantener un CSS limpio y reutilizable.
+- **Calidad de Código:** Estructura de archivos organizada y código semántico.
 
-- [X] Configuración inicial del entorno Vite + React + TypeScript.
-- [X] Modelado de datos para Materiales e Inscripciones/Usuarios.
-- [X] Creación de vistas: Dashboard, Inventario, Perfil y Acerca de.
-- [X] Implementación de sistema de búsqueda y filtros avanzados.
+## 5. Publicación y Despliegue
+El sitio está disponible públicamente para su revisión y uso:
+- **Plataforma:** GitHub Pages.
+- **Configuración:** Despliegue automatizado desde la rama principal o carpeta de compilación.
+- **🚀 Enlace al Portfolio Publicado:** [Haz clic aquí para ver la web](https://victorgb20.github.io/kinvtrue/)
 
-### Mapa del Sitio
+## 6. Recursos y Bibliografía
+Material de apoyo y fuentes consultadas durante el desarrollo:
+- Documentación de [Tailwind CSS](https://tailwindcss.com/docs).
+- Tutoriales de Figma para la creación de sistemas de diseño y variables.
+- Inspiración de portfolios en comunidades como [Behance](https://www.behance.net/) o [Dribbble](https://dribbble.com/).
 
-- **Acceso**: Login / Registro.
-- **Panel Principal**: Dashboard (Resumen de métricas).
-- **Gestión**: Lista de Materiales (Filtros: En reparación, Bajo stock, etc.).
-- **Usuario**: Perfil (Personalización) y Acerca de.
+## 7. Manual de Uso
+Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
----
+### Requisitos Previos
+- Tener instalado [Node.js](https://nodejs.org/) (versión 18 o superior recomendada).
+- Un gestor de paquetes como `npm`.
 
-## 3. Diseño y Estilo
+### Instalación y Ejecución
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/VictorGB20/kinvtrue.git
+   ```
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
+3. **Lanzar el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+   La aplicación estará disponible en `http://localhost:5173`.
 
-### Paleta de Colores
+### Otros Comandos Útiles
+- **Compilar para producción:** `npm run build`
+- **Previsualizar la compilación:** `npm run preview`
+- **Sincronizar estilos Tailwind:** `npm run estilos` (recompila el CSS ante cambios en `input.css`).
 
-Utilizamos una paleta corporativa moderna centrada en la legibilidad y el enfoque:
+## 8. Evaluación y Rúbrica
+Este proyecto cumple con los siguientes criterios de evaluación:
 
-- **Primario**: `#0f172a` (Slate 900) - Usado para la estructura y textos fuertes.
-- **Acción**: `#6366f1` (Indigo 500) - Botones principales y llamadas a la acción.
-- **Fondo**: `#f8fafc` (Slate 50) - Fondo de la aplicación para reducir fatiga visual.
-- **Accent/Éxito**: `#10b981` (Esmeralda) - Estados positivos y stock disponible.
-
-### Tipografía
-
-- Se ha implementado **Inter** (o fuente sans-serif del sistema) a través de Tailwind para garantizar una visualización clara en todos los dispositivos.
-
-### Referencias e Inspiración
-
-El diseño se inspira en dashboards modernos de SaaS (Software as a Service) como Stripe o Vercel, priorizando la limpieza visual y el uso de sombras suaves.
-
----
-
-## 4. Desarrollo Web
-
-### Stack Tecnológico
-
-- **Core**: [React 19](https://react.dev/)
-- **Build Tool**: [Vite 7](https://vitejs.dev/)
-- **Estilos**: [Tailwind CSS 4](https://tailwindcss.com/)
-- **Gestión de Estado**: [Zustand](https://zustand-demo.pmnd.rs/)
-- **Enrutado**: [React Router 7](https://reactrouter.com/)
-- **Lenguaje**: [TypeScript](https://www.typescriptlang.org/)
-
-### Características Destacadas
-
-- **Diseño Responsivo**: Aplicación optimizada para móviles, tablets y escritorio mediante breakpoints nativos de Tailwind.
-- **Biblioteca de Iconos**: Uso de un sistema de sprites SVG (`sprites.svg`) para optimizar la carga y personalización de iconos.
-- **Variables Tailwind 4**: Uso extensivo de la nueva sintaxis de variables de Tailwind para un sistema de diseño consistente.
-- **@apply Reutilización**: Limpieza de HTML mediante la creación de clases compuestas en CSS para botones y tarjetas.
-
----
-
-## 5. Publicación
-
-### GitHub Pages
-
-La aplicación está publicada en GitHub Pages: https://victorgb20.github.io/kinvtrue/
-
-### Capturas del Sitio
-
-*(Aquí se pueden añadir capturas de pantalla de las vistas una vez generadas)*
-
-- [Dashboard View]
-- [Inventario View]
-- [Login Screen]
+| Criterio | Descripción | Estado |
+| :--- | :--- | :---: |
+| **Prototipo Figma** | Diseño completo, uso de variables y colecciones de tokens. | ✅ |
+| **Biblioteca Sprites** | Uso de `sprites.svg` para iconos y logos. | ✅ |
+| **Variables Tailwind** | Exportación de colores y definición de fuentes/breakpoints. | ✅ |
+| **Reutilización CSS** | Uso correcto de `@apply` y CSS modular. | ✅ |
+| **Responsividad** | Adaptación perfecta a móviles y tablets. | ✅ |
+| **GitHub Pages** | README con enlaces y despliegue funcional. | ✅ |
+| **Calidad de Código** | Código limpio, semántico y bien organizado. | ✅ |
+| **Creatividad** | Uso de gradientes, variantes y efectos avanzados. | ✅ |
+| **Funcionalidad** | Todo el portfolio y enlaces funcionan correctamente. | ✅ |
