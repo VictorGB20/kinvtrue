@@ -15,15 +15,21 @@ export const Inventario = () => {
     const setActiveFilter = useAppStore(state => state.setActiveFilter);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [editingMaterial, setEditingMaterial] = useState<Material | null>(null);
+    const [searchQuery, setSearchQuery] = useState('');
 
     // Filter materials by current user first
+
     const userMateriales = allMateriales.filter(m => m.userId === usuario?.id);
 
-    // Then apply active filter
+    // Then apply active filter and search query
     const materialsFiltrados = userMateriales.filter(m => {
-        if (activeFilter === 'REPARACION') return m.stockReparacion > 0;
-        if (activeFilter === 'BAJA') return m.stockDisponible < 3;
-        return true;
+        const matchesFilter = activeFilter === 'TODOS'
+            || (activeFilter === 'REPARACION' && m.stockReparacion > 0)
+            || (activeFilter === 'BAJA' && m.stockDisponible < 3);
+
+        const matchesSearch = m.nombre.toLowerCase().includes(searchQuery.toLowerCase());
+
+        return matchesFilter && matchesSearch;
     });
 
     const handleEdit = (material: Material) => {
@@ -62,14 +68,31 @@ export const Inventario = () => {
                         </span>
                     )}
                 </div>
-                <button
-                    onClick={() => setIsModalOpen(true)}
-                    className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-all shadow-sm"
-                >
-                    <svg className="w-5 h-5 stroke-current fill-none"><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-plus`} /></svg>
-                    Añadir Material
-                </button>
+
+                <div className="flex items-center gap-4">
+                    <div className="relative w-full sm:max-w-md">
+                        <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 stroke-current fill-none"><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-search`} /></svg>
+                        <input
+                            type="text"
+                            placeholder="Buscar materiales..."
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
+                        />
+                    </div>
+                    <button
+                        onClick={() => setIsModalOpen(true)}
+                        className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-2 py-2 rounded-lg transition-all shadow-sm w-full"
+                    >
+                        <svg className="w-5 h-5 stroke-current fill-none"><use href={`${import.meta.env.BASE_URL}sprites.svg#icon-plus`} /></svg>
+                        Añadir Material
+                    </button>
+
+                </div>
+
             </div>
+
+
 
             <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse">
