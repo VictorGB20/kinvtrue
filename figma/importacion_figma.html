@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinvtrue - Figma Import Prototype</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <style>
+        .figma-desktop-frame {
+            width: 1440px;
+            min-height: 900px;
+            margin: 0 auto;
+            background-color: #F3F4F6;
+            /* Fondo gris claro (bg-gray-100) typical de dashboard */
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Utilidades para Auto-Layout en Figma */
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-300 p-8 flex flex-col justify-center items-center font-sans">
+
+    <!-- Instrucciones -->
+    <div class="max-w-4xl text-center bg-white p-6 rounded-xl shadow-md mb-8">
+        <h2 class="text-2xl font-bold mb-2">Prototipo Kinvtrue - Importación a Figma</h2>
+        <p class="text-gray-600">Abre este archivo en tu navegador y usa el plugin <strong>html.to.design</strong> de
+            Figma.</p>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- FRAME PRINCIPAL (Desktop Dashboard)        -->
+    <!-- ========================================== -->
+    <div class="figma-desktop-frame shadow-2xl overflow-hidden rounded-lg border border-gray-200">
+
+        <!-- SIDEBAR -->
+        <aside class="w-[280px] bg-white border-r border-gray-200 flex-col justify-between h-full">
+            <div class="flex-col">
+                <!-- Logo -->
+                <div class="h-20 flex-row items-center px-6 border-b border-gray-100 gap-3">
+                    <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white">
+                        <i class="ph-fill ph-package text-2xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-900 tracking-tight">Kinvtrue</span>
+                </div>
+
+                <!-- Nav Links -->
+                <div class="p-4 flex-col gap-2">
+                    <div
+                        class="flex-row items-center gap-3 px-4 py-3 rounded-lg text-gray-600 font-medium hover:bg-gray-50">
+                        <i class="ph ph-squares-four text-xl"></i> Dashboard
+                    </div>
+                    <div
+                        class="flex-row items-center gap-3 px-4 py-3 rounded-lg bg-blue-50 text-blue-700 font-semibold border-l-4 border-blue-600">
+                        <i class="ph-fill ph-archive-box text-xl"></i> Inventario
+                    </div>
+                    <div
+                        class="flex-row items-center gap-3 px-4 py-3 rounded-lg text-gray-600 font-medium hover:bg-gray-50">
+                        <i class="ph ph-users text-xl"></i> Usuarios
+                    </div>
+                    <div
+                        class="flex-row items-center gap-3 px-4 py-3 rounded-lg text-gray-600 font-medium hover:bg-gray-50">
+                        <i class="ph ph-gear text-xl"></i> Configuración
+                    </div>
+                </div>
+            </div>
+
+            <!-- Usuario Bottom -->
+            <div class="p-4 border-t border-gray-100 flex-row items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-tr from-purple-500 to-indigo-500 rounded-full"></div>
+                <div class="flex-col">
+                    <span class="text-sm font-semibold text-gray-900">Usuario Test</span>
+                    <span class="text-xs text-gray-500">Administrador</span>
+                </div>
+                <i class="ph ph-sign-out text-gray-400 ml-auto text-xl hover:text-red-500"></i>
+            </div>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="flex-1 p-8 flex-col gap-6">
+
+            <!-- HEADER VIEW -->
+            <header class="flex-row justify-between items-center w-full">
+                <div class="flex-col">
+                    <h1 class="text-3xl font-bold text-gray-900">Gestión de Inventario</h1>
+                    <p class="text-gray-500">Administra y supervisa los materiales del centro.</p>
+                </div>
+
+                <!-- Search & Actions -->
+                <div class="flex-row gap-4 items-center">
+                    <div class="flex-row items-center bg-white border border-gray-300 rounded-lg px-3 py-2 w-[300px]">
+                        <i class="ph ph-magnifying-glass text-gray-400 text-lg mr-2"></i>
+                        <span class="text-gray-400 text-sm">Buscar materiales...</span>
+                    </div>
+                    <div
+                        class="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium flex-row items-center gap-2 shadow-sm hover:bg-blue-700">
+                        <i class="ph-bold ph-plus"></i> Añadir Material
+                    </div>
+                </div>
+            </header>
+
+            <!-- FILTERS DASHBOARD -->
+            <div class="flex-row gap-4 w-full">
+                <!-- Stat Card 1 -->
+                <div
+                    class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex-1 flex-row items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+                        <i class="ph-fill ph-packages text-2xl"></i>
+                    </div>
+                    <div class="flex-col">
+                        <span class="text-sm text-gray-500 font-medium">Total Materiales</span>
+                        <span class="text-2xl font-bold text-gray-900">124</span>
+                    </div>
+                </div>
+                <!-- Stat Card 2 -->
+                <div
+                    class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex-1 flex-row items-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+                        <i class="ph-fill ph-check-circle text-2xl"></i>
+                    </div>
+                    <div class="flex-col">
+                        <span class="text-sm text-gray-500 font-medium">Stock Disponible</span>
+                        <span class="text-2xl font-bold text-gray-900">89</span>
+                    </div>
+                </div>
+                <!-- Stat Card 3 -->
+                <div
+                    class="bg-white p-5 rounded-xl border border-blue-200 shadow-sm flex-1 flex-row items-center gap-4 border-l-4 border-l-orange-500">
+                    <div class="w-12 h-12 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center">
+                        <i class="ph-fill ph-wrench text-2xl"></i>
+                    </div>
+                    <div class="flex-col">
+                        <span class="text-sm text-gray-500 font-medium">En Mantenimiento</span>
+                        <span class="text-2xl font-bold text-gray-900">12</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DATA TABLE PANEL -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 flex-col overflow-hidden w-full mt-2">
+
+                <!-- Table Header Bar -->
+                <div class="p-6 border-b border-gray-200 flex-row justify-between items-center">
+                    <h2 class="text-xl font-bold text-gray-800">Inventario de Equipos</h2>
+                    <!-- Filtro Activo Badge -->
+                    <div
+                        class="px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold flex-row items-center gap-2 border border-blue-100">
+                        <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                        Filtro: Todos
+                        <i class="ph-bold ph-caret-down ml-1"></i>
+                    </div>
+                </div>
+
+                <!-- Table Content -->
+                <div class="w-full">
+                    <!-- Configurando Headers manualmente para Auto-Layout -->
+                    <div
+                        class="bg-gray-50 border-b border-gray-200 flex-row px-6 py-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                        <div class="w-[30%]">Nombre</div>
+                        <div class="w-[20%]">Categoría</div>
+                        <div class="w-[15%] text-center">Stock</div>
+                        <div class="w-[15%]">Estado</div>
+                        <div class="w-[20%] text-right">Acciones</div>
+                    </div>
+
+                    <!-- Row 1 -->
+                    <div class="flex-row items-center px-6 py-4 border-b border-gray-100 bg-white">
+                        <div class="w-[30%] flex-row items-center gap-3">
+                            <i class="ph-fill ph-monitor text-2xl text-gray-400"></i>
+                            <div class="flex-col">
+                                <span class="text-sm font-semibold text-gray-900">Monitor Dell 24"</span>
+                                <span class="text-xs text-gray-500">ID: MN-001</span>
+                            </div>
+                        </div>
+                        <div class="w-[20%] text-sm text-gray-600">Hardware Info.</div>
+                        <div class="w-[15%] text-center font-medium text-gray-900">15</div>
+                        <div class="w-[15%]">
+                            <span
+                                class="px-2.5 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">Operativo</span>
+                        </div>
+                        <div class="w-[20%] flex-row justify-end gap-2 text-gray-400">
+                            <div class="p-2 hover:bg-gray-100 rounded-md"><i
+                                    class="ph-bold ph-pencil-simple text-blue-600"></i></div>
+                            <div class="p-2 hover:bg-gray-100 rounded-md"><i class="ph-bold ph-trash text-red-500"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="flex-row items-center px-6 py-4 border-b border-gray-100 bg-white">
+                        <div class="w-[30%] flex-row items-center gap-3">
+                            <i class="ph-fill ph-keyboard text-2xl text-gray-400"></i>
+                            <div class="flex-col">
+                                <span class="text-sm font-semibold text-gray-900">Teclado Mecánico</span>
+                                <span class="text-xs text-gray-500">ID: TK-042</span>
+                            </div>
+                        </div>
+                        <div class="w-[20%] text-sm text-gray-600">Periféricos</div>
+                        <div class="w-[15%] text-center font-medium text-gray-900">8</div>
+                        <div class="w-[15%]">
+                            <span
+                                class="px-2.5 py-1 bg-orange-100 text-orange-700 text-xs font-medium rounded-full">Mantenimiento</span>
+                        </div>
+                        <div class="w-[20%] flex-row justify-end gap-2 text-gray-400">
+                            <div class="p-2 hover:bg-gray-100 rounded-md"><i
+                                    class="ph-bold ph-pencil-simple text-blue-600"></i></div>
+                            <div class="p-2 hover:bg-gray-100 rounded-md"><i class="ph-bold ph-trash text-red-500"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="flex-row items-center px-6 py-4 bg-white">
+                        <div class="w-[30%] flex-row items-center gap-3">
+                            <i class="ph-fill ph-projector-screen text-2xl text-gray-400"></i>
+                            <div class="flex-col">
+                                <span class="text-sm font-semibold text-gray-900">Proyector Epson</span>
+                                <span class="text-xs text-gray-500">ID: PR-003</span>
+                            </div>
+                        </div>
+                        <div class="w-[20%] text-sm text-gray-600">Audiovisual</div>
+                        <div class="w-[15%] text-center font-medium text-red-600">2</div>
+                        <div class="w-[15%]">
+                            <span class="px-2.5 py-1 bg-red-100 text-red-700 text-xs font-medium rounded-full">Stock
+                                Bajo</span>
+                        </div>
+                        <div class="w-[20%] flex-row justify-end gap-2 text-gray-400">
+                            <div class="p-2 hover:bg-gray-100 rounded-md"><i
+                                    class="ph-bold ph-pencil-simple text-blue-600"></i></div>
+                            <div class="p-2 hover:bg-gray-100 rounded-md"><i class="ph-bold ph-trash text-red-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL OVERLAY -->
+            <div class="absolute inset-0 bg-gray-900/50 flex flex-col items-center justify-center z-50">
+                <div class="bg-white rounded-xl shadow-2xl w-[500px] flex-col overflow-hidden">
+                    <div class="px-6 py-4 border-b border-gray-200 flex-row justify-between items-center">
+                        <h3 class="text-xl font-bold text-gray-900">Nuevo Material</h3>
+                        <i class="ph-bold ph-x text-gray-400 text-lg hover:text-gray-600 cursor-pointer"></i>
+                    </div>
+
+                    <div class="p-6 flex-col gap-5">
+                        <!-- Form Field: Nombre -->
+                        <div class="flex-col gap-1.5 w-full">
+                            <label class="text-sm font-medium text-gray-700">Nombre del Equipo</label>
+                            <div
+                                class="border border-gray-300 rounded-md px-3 py-2 text-gray-400 text-sm bg-white w-full">
+                                Ej. Portátil Lenovo...</div>
+                        </div>
+
+                        <!-- Form Field: Categoría -->
+                        <div class="flex-col gap-1.5 w-full">
+                            <label class="text-sm font-medium text-gray-700">Categoría</label>
+                            <div
+                                class="border border-gray-300 rounded-md px-3 py-2 text-gray-900 text-sm bg-white w-full flex-row justify-between items-center">
+                                Portátiles <i class="ph-bold ph-caret-down text-gray-400"></i>
+                            </div>
+                        </div>
+
+                        <!-- Form Field: Grid 3 cols (Stocks) -->
+                        <div class="grid grid-cols-3 gap-4 w-full">
+                            <div class="flex-col gap-1.5">
+                                <label class="text-xs font-semibold text-green-700">Disponibles</label>
+                                <div
+                                    class="border border-green-200 rounded-md px-3 py-2 text-gray-900 text-sm bg-white text-center">
+                                    0</div>
+                            </div>
+                            <div class="flex-col gap-1.5">
+                                <label class="text-xs font-semibold text-yellow-700">Reparación</label>
+                                <div
+                                    class="border border-yellow-200 rounded-md px-3 py-2 text-gray-900 text-sm bg-white text-center">
+                                    0</div>
+                            </div>
+                            <div class="flex-col gap-1.5">
+                                <label class="text-xs font-semibold text-red-700">Baja/Roto</label>
+                                <div
+                                    class="border border-red-200 rounded-md px-3 py-2 text-gray-900 text-sm bg-white text-center">
+                                    0</div>
+                            </div>
+                        </div>
+
+                        <!-- Form Field: Ubicación -->
+                        <div class="flex-col gap-1.5 w-full">
+                            <label class="text-sm font-medium text-gray-700">Ubicación</label>
+                            <div
+                                class="border border-gray-300 rounded-md px-3 py-2 text-gray-400 text-sm bg-white w-full">
+                                Ej: Planta 2, Rack A</div>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="flex-row justify-end gap-3 mt-2 w-full pt-4 border-t border-gray-100">
+                            <div
+                                class="px-5 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 cursor-pointer">
+                                Cancelar
+                            </div>
+                            <div
+                                class="px-5 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 shadow-sm cursor-pointer">
+                                Guardar Material
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>
