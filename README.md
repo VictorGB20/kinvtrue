@@ -6,7 +6,7 @@ Este repositorio contiene el **Proyecto Intermodular** de Desarrollo de Aplicaci
 
 ## 📋 Índice
 
-1. [Contexto y Briefing](#1-contexto-y-briefing)
+1. [Briefing](#1-Briefing)
 2. [Análisis y Planificación de Estrategia](#2-análisis-y-planificación-de-estrategia)
 3. [Diseño Visual y Prototipado](#3-diseño-visual-y-prototipado)
 4. [Implementación Técnica (Desarrollo Web)](#4-implementación-técnica-desarrollo-web)
@@ -17,14 +17,46 @@ Este repositorio contiene el **Proyecto Intermodular** de Desarrollo de Aplicaci
 
 ---
 
-## 1. Contexto y Briefing
-La comunicación entre el cliente y la agencia es la base de un buen diseño. Este proyecto se fundamenta en un documento de bases que recoge:
-- **Información del Cliente:** Perfil profesional o corporativo.
-- **Objetivos:** Definición de metas claras para el sitio web.
-- **Descripción del Negocio:** Análisis del sector y propuesta de valor.
-- **Público Objetivo:** Definición del perfil de usuario (target).
-- **Requerimientos Específicos:** Funcionalidades clave solicitadas.
-- **Detalles Técnicos y Plazos:** Limitaciones tecnológicas y cronograma inicial.
+## 1. Briefing
+
+### Información General del Cliente
+**Nombre del Cliente:** KinvTrue (Proyecto Interno / VictorGB20)  
+**Tipo de Negocio:** Solución de Gestión de Inventario Local para Talleres Técnicos y Almacenes Pequeños.  
+**Ubicación:** Entorno Web (Publicado en GitHub Pages).  
+**Objetivo del Sitio Web:** Proporcionar una herramienta ligera, rápida y privada para la gestión de stock y seguimiento de reparaciones sin dependencia de servidores externos.
+
+### Objetivos del Proyecto
+- **Optimización del Flujo de Trabajo:** Reducir el tiempo de registro y actualización de materiales y estados de reparación.
+- **Privacidad y Velocidad:** Garantizar que los datos se almacenen localmente para una respuesta instantánea y máxima seguridad.
+- **Accesibilidad y Sensibilidad:** Ofrecer una interfaz moderna (UI/UX) que se adapte a cualquier dispositivo (móvil, tablet, escritorio).
+- **Control de Stock:** Implementar alertas visuales para materiales con bajo inventario.
+
+### Descripción del Negocio
+**Misión:** Facultar a técnicos y pequeños gestores con una herramienta profesional de inventario que no requiera configuración de bases de datos.  
+**Visión:** Convertirse en la opción preferida para usuarios que buscan simplicidad y potencia en la organización de sus componentes técnicos.  
+**Valores:** Eficiencia, minimalismo técnico, independencia de infraestructura y excelencia visual.
+
+### Información de Mercado
+**Audiencia Objetivo:** Técnicos de electrónica, talleres de reparación de dispositivos, aficionados al bricolaje (DIY) y gestores de mini-almacenes que necesitan rapidez sobre movilidad entre dispositivos.  
+**Competidores:** Hojas de cálculo (Excel/Google Sheets), sistemas CRM complejos (Odoo, Salesforce) y herramientas de gestión de stock tradicionales que suelen ser pesadas o costosas.  
+**Diferenciadores Clave:** Uso de **LocalStorage** para persistencia total sin login obligatorio, diseño basado en **Tailwind CSS 4** para una estética premium y gestión de estados reactiva con **Zustand**.
+
+### Requerimientos Específicos
+**Idiomas:** Español (Interfaz principal).  
+**Tipología de Página Web:** Single Page Application (SPA) con arquitectura orientada a componentes.  
+**Estilo Visual y Tono:** Profesional, moderno y tecnológico. Uso de una paleta oscura (Slate 900) con acentos vibrantes (Indigo 500) y de éxito (Emerald). El tono es directo, funcional y eficiente.
+
+### Detalles Técnicos
+**Tecnologías Core:** React 19, Vite 7, TypeScript.  
+**Estilos y UI:** Tailwind CSS v4 (modo producción), sistema de iconos mediante Sprite SVG (`sprites.svg`).  
+**Gestión de Estado:** Zustand para un flujo de datos global eficiente.  
+**Persistencia:** LocalStorage API para almacenamiento persistente en el navegador del usuario.  
+**Funcionalidades Esenciales:** Dashboard de métricas, lista de materiales con filtros dinámicos (Reparación, Stock Bajo), gestión de perfiles de usuario y diseño 100% responsivo.
+
+### Plazos y Observaciones
+**Estado del Proyecto:** En fase de refinamiento y despliegue final.  
+**Fecha de Lanzamiento:** Febrero 2026.  
+**Observaciones:** Se ha priorizado el uso de las últimas versiones de las herramientas (React 19, Tailwind 4) para asegurar que el portfolio demuestre competencia técnica actualizada. La aplicación es totalmente funcional desde el despliegue en GitHub Pages.
 
 ## 2. Análisis y Planificación de Estrategia
 Fase dedicada a la optimización de la experiencia de usuario y la visibilidad en el mercado:
