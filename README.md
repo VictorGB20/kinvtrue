@@ -47,7 +47,7 @@ Generación de la identidad visual y estudio de la competencia:
 
 ## 4. Implementación Técnica (Desarrollo Web)
 Traducción del diseño a código funcional utilizando estándares modernos:
-- **Framework de Estilos:** [Tailwind CSS v4](https://tailwindcss.com/) en modo producción.
+- **Framework de Estilos:** `Tailwind CSS v4` en modo producción.
 - **Diseño Responsivo:** Implementación de breakpoints y layouts adaptables según la documentación oficial.
 - **Gestión de Assets:** Implementación de la biblioteca `sprites.svg` para optimizar la carga de iconos y logotipos SVG.
 - **Personalización y Reutilización:**
@@ -63,15 +63,15 @@ El sitio está disponible públicamente para su revisión y uso:
 
 ## 6. Recursos y Bibliografía
 Material de apoyo y fuentes consultadas durante el desarrollo:
-- Documentación de [Tailwind CSS](https://tailwindcss.com/docs).
+- Documentación de `Tailwind CSS`.
 - Tutoriales de Figma para la creación de sistemas de diseño y variables.
-- Inspiración de portfolios en comunidades como [Behance](https://www.behance.net/) o [Dribbble](https://dribbble.com/).
+- Inspiración de portfolios en comunidades.
 
 ## 7. Manual de Uso
 Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
 ### Requisitos Previos
-- Tener instalado [Node.js](https://nodejs.org/) (versión 18 o superior recomendada).
+- Tener instalado `Node.js` (versión 18 o superior recomendada).
 - Un gestor de paquetes como `npm`.
 
 ### Instalación y Ejecución
