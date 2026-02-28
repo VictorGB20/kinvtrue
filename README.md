@@ -97,7 +97,7 @@ El sitio está disponible públicamente para su revisión y uso:
 Material de apoyo y fuentes consultadas durante el desarrollo:
 - Documentación de `Tailwind CSS`.
 - Tutoriales de Figma para la creación de sistemas de diseño y variables.
-- Inspiración de portfolios en comunidades.
+- Inspiración de proyectos en comunidades.
 
 ## 7. Manual de Uso
 Sigue estos pasos para ejecutar el proyecto en tu entorno local:
@@ -139,4 +139,4 @@ Este proyecto cumple con los siguientes criterios de evaluación:
 | **GitHub Pages** | README con enlaces y despliegue funcional. | ✅ |
 | **Calidad de Código** | Código limpio, semántico y bien organizado. | ✅ |
 | **Creatividad** | Uso de gradientes, variantes y efectos avanzados. | ✅ |
-| **Funcionalidad** | Todo el portfolio y enlaces funcionan correctamente. | ✅ |
+| **Funcionalidad** | Todo el proyecto y enlaces funcionan correctamente. | ✅ |
