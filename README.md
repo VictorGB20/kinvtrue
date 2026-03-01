@@ -13,7 +13,6 @@ Este repositorio contiene el **Proyecto Intermodular** de Desarrollo de Aplicaci
 5. [Publicación y Despliegue](#5-publicación-y-despliegue)
 6. [Recursos y Bibliografía](#6-recursos-y-bibliografía)
 7. [Manual de Uso](#7-manual-de-uso)
-8. [Evaluación y Rúbrica](#8-evaluación-y-rúbrica)
 
 ---
 
@@ -125,18 +124,3 @@ Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 - **Compilar para producción:** `npm run build`
 - **Previsualizar la compilación:** `npm run preview`
 - **Sincronizar estilos Tailwind:** `npm run estilos` (recompila el CSS ante cambios en `input.css`).
-
-## 8. Evaluación y Rúbrica
-Este proyecto cumple con los siguientes criterios de evaluación:
-
-| Criterio | Descripción | Estado |
-| :--- | :--- | :---: |
-| **Prototipo Figma** | Diseño completo, uso de variables y colecciones de tokens. | ✅ |
-| **Biblioteca Sprites** | Uso de `sprites.svg` para iconos y logos. | ✅ |
-| **Variables Tailwind** | Exportación de colores y definición de fuentes/breakpoints. | ✅ |
-| **Reutilización CSS** | Uso correcto de `@apply` y CSS modular. | ✅ |
-| **Responsividad** | Adaptación perfecta a móviles y tablets. | ✅ |
-| **GitHub Pages** | README con enlaces y despliegue funcional. | ✅ |
-| **Calidad de Código** | Código limpio, semántico y bien organizado. | ✅ |
-| **Creatividad** | Uso de gradientes, variantes y efectos avanzados. | ✅ |
-| **Funcionalidad** | Todo el proyecto y enlaces funcionan correctamente. | ✅ |
